@@ -1,11 +1,10 @@
 'use client'
 
 import React, { useEffect, useState } from 'react'
-import { Field, Form, Formik } from 'formik'
-import QRCode from 'qrcode.react'
 
 import { BiCopy, BiQuestionMark } from 'react-icons/bi'
 import { BsClock, BsExclamationCircle } from 'react-icons/bs'
+
 import useRandomToken from '@/RandomToken'
 import QrCodeGenerator from '@/QrCodeGenerator'
 
