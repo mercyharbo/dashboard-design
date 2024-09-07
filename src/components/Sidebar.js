@@ -16,18 +16,28 @@ const NavItems = [
     href: '/dashboard',
     icon: <BsFillGridFill size={20} />,
   },
-  { id: 2, title: 'fund', href: '/fund', icon: <BiMoney size={20} /> },
+  {
+    id: 2,
+    title: 'fund',
+    href: '/dashboard/fund',
+    icon: <BiMoney size={20} />,
+  },
   {
     id: 3,
     title: 'withdraw',
-    href: '/withdraw',
+    href: '/dashboard/withdraw',
     icon: <FaExchangeAlt size={20} />,
   },
-  { id: 4, title: 'wallet', href: '/wallet', icon: <HiWallet size={20} /> },
+  {
+    id: 4,
+    title: 'wallet',
+    href: '/dashboard/wallet',
+    icon: <HiWallet size={20} />,
+  },
   {
     id: 5,
     title: 'settings',
-    href: '/settings',
+    href: '/dashboard/settings',
     icon: <MdSettings size={20} />,
   },
 ]
