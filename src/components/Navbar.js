@@ -225,8 +225,8 @@ export default function Navbar() {
             </div>
 
             <Link
-              href='/notification'
-              className='underline ml-auto font-medium'
+              href='/dashboard/notification'
+              className='underline flex justify-end items-end w-full '
             >
               View all
             </Link>
