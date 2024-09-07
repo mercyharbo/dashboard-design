@@ -14,41 +14,6 @@ import avatar from '@/assets/avatar.png'
 import { HiWallet } from 'react-icons/hi2'
 import { usePathname } from 'next/navigation'
 
-// const data = [
-//   {
-//     id: 1,
-//     title: 'Wallet',
-//     content:
-//       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ',
-//     icon: <BiWalletAlt />,
-//     href: '/wallet',
-//   },
-//   {
-//     id: 2,
-//     title: 'Mobile App',
-//     content:
-//       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor',
-//     icon: <BiPhone />,
-//     href: '#',
-//   },
-//   {
-//     id: 3,
-//     title: 'Trading API',
-//     content:
-//       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ',
-//     icon: <BiChip />,
-//     href: '#',
-//   },
-//   {
-//     id: 4,
-//     title: 'News',
-//     content:
-//       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ',
-//     icon: <BsNewspaper />,
-//     href: '#',
-//   },
-// ]
-
 const NavItems = [
   {
     id: 1,
@@ -56,26 +21,29 @@ const NavItems = [
     href: '/dashboard',
     icon: <BsFillGridFill size={20} />,
   },
-  { id: 2, title: 'fund', href: '/fund', icon: <BiMoney size={20} /> },
+  { id: 2, title: 'fund', href: '/dashboad/fund', icon: <BiMoney size={20} /> },
   {
     id: 3,
     title: 'withdraw',
-    href: '/withdraw',
+    href: '/dashboad/withdraw',
     icon: <FaExchangeAlt size={20} />,
   },
-  { id: 4, title: 'wallet', href: '/wallet', icon: <HiWallet size={20} /> },
+  {
+    id: 4,
+    title: 'wallet',
+    href: '/dashboad/wallet',
+    icon: <HiWallet size={20} />,
+  },
   {
     id: 5,
     title: 'settings',
-    href: '/settings',
+    href: '/dashboad/settings',
     icon: <MdSettings size={20} />,
   },
 ]
 
 export default function Navbar() {
   const pathname = usePathname()
-
-  const [isModalOpen, setIsModalOpen] = useState(false)
   const [settingModal, setSettingModal] = useState(false)
   const [notificationModal, setNotificationModal] = useState(false)
   const [openNavMenu, setOpenNavMenu] = useState(false)
@@ -85,45 +53,10 @@ export default function Navbar() {
       <button
         type='button'
         onClick={() => setOpenNavMenu(true)}
-        className='flex laptop:hidden'
+        className='flex text-2xl laptop:hidden'
       >
         <FaBars />
       </button>
-
-      {/* {isModalOpen && (
-        <>
-          <div
-            onClick={() => setIsModalOpen(false)}
-            className='fixed top-0 left-0 h-screen w-full bg-[#000000af] '
-          ></div>
-          <article
-            className='absolute rounded-xl z-10 laptop:top-[4rem] laptop:left-2 laptop:w-[70%] laptop:p-10 tablet:w-[95%] tablet:top-3 tablet:left-4 tablet:p-10 
-          mobile:p-5 mobile:w-[95%] mobile:left-3 mobile:top-2 bg-[#fff] dark:bg-themeColor text-black dark:text-white flex flex-col justify-start items-start gap-5 '
-          >
-            <div className='grid laptop:grid-cols-2 laptop:gap-10 tablet:grid-cols-2 tablet:gap-10 mobile:grid-cols-1 mobile:gap-10 content-center place-items-start'>
-              {data.map((item) => {
-                return (
-                  <Link
-                    key={item.id}
-                    href={item.href}
-                    className='flex justify-start items-start gap-3 w-full'
-                  >
-                    <span className='bg-primary p-4 rounded-md dark:text-black '>
-                      {item.icon}
-                    </span>
-                    <div className='flex flex-col justify-start items-start gap-1 w-full'>
-                      <h1 className='font-medium laptop:text-xl tablet:text-xl mobile:text-base'>
-                        {item.title}
-                      </h1>
-                      <p className='text-secondary text-sm '>{item.content}</p>
-                    </div>
-                  </Link>
-                )
-              })}
-            </div>
-          </article>
-        </>
-      )} */}
 
       {settingModal && (
         <>
