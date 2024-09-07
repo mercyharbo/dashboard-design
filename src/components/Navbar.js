@@ -21,23 +21,28 @@ const NavItems = [
     href: '/dashboard',
     icon: <BsFillGridFill size={20} />,
   },
-  { id: 2, title: 'fund', href: '/dashboad/fund', icon: <BiMoney size={20} /> },
+  {
+    id: 2,
+    title: 'fund',
+    href: '/dashboard/fund',
+    icon: <BiMoney size={20} />,
+  },
   {
     id: 3,
     title: 'withdraw',
-    href: '/dashboad/withdraw',
+    href: '/dashboard/withdraw',
     icon: <FaExchangeAlt size={20} />,
   },
   {
     id: 4,
     title: 'wallet',
-    href: '/dashboad/wallet',
+    href: '/dashboard/wallet',
     icon: <HiWallet size={20} />,
   },
   {
     id: 5,
     title: 'settings',
-    href: '/dashboad/settings',
+    href: '/dashboard/settings',
     icon: <MdSettings size={20} />,
   },
 ]
@@ -192,7 +197,7 @@ export default function Navbar() {
       </div>
 
       {openNavMenu && (
-        <div className='fixed top-0 left-0 bg-[#00000076] w-full h-screen flex flex-col'>
+        <div className='fixed z-20 top-0 left-0 bg-[#00000076] w-full h-screen flex flex-col'>
           <nav className='flex flex-col justify-start items-start gap-5 bg-white dark:bg-themeColor mobile:w-[80%] tablet:w-[50%] h-screen p-5'>
             <div className='flex justify-between items-center w-full'>
               <Link href='/' className='text-2xl font-semibold '>
