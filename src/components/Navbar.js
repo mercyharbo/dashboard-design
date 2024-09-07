@@ -260,7 +260,7 @@ export default function Navbar() {
 
       {openNavMenu && (
         <div className='fixed top-0 left-0 bg-[#00000076] w-full h-screen flex flex-col'>
-          <nav className='flex flex-col justify-start items-start gap-5 bg-white mobile:w-[80%] tablet:w-[50%] h-screen p-5'>
+          <nav className='flex flex-col justify-start items-start gap-5 bg-white dark:bg-themeColor mobile:w-[80%] tablet:w-[50%] h-screen p-5'>
             <div className='flex justify-between items-center w-full'>
               <Link href='/' className='text-2xl font-semibold '>
                 Logo
