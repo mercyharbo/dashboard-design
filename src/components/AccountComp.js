@@ -24,7 +24,7 @@ export default function AccountComp() {
   }, [])
 
   return (
-    <section className='flex flex-col justify-start items-start gap-5 w-full  '>
+    <section className='flex flex-col justify-start items-start gap-5 w-full py-10  '>
       <div className='flex flex-col gap-1'>
         <h1 className='text-base'>Account update:</h1>
         <p className='text-[grey] text-sm'>
