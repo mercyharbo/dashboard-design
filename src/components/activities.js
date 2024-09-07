@@ -13,6 +13,22 @@ export default function Activities() {
       date: 'February 21, 2021',
     },
     {
+      id: 'eth',
+      name: 'Ethereum Purchased',
+      amountCrypto: '0.0154 ETH',
+      amountUSD: '$100.00',
+      status: 'Pending',
+      date: 'February 21, 2021',
+    },
+    {
+      id: 'btc1',
+      name: 'Bitcoin Purchased',
+      amountCrypto: '0.3 BTC',
+      amountUSD: '$30.00',
+      status: 'Completed',
+      date: 'February 14, 2021',
+    },
+    {
       id: 'btc1',
       name: 'Bitcoin Purchased',
       amountCrypto: '0.3 BTC',
@@ -47,7 +63,7 @@ export default function Activities() {
   ]
 
   return (
-    <div className='flex flex-col justify-start items-start gap-5 w-full '>
+    <div className='flex flex-col justify-start items-start gap-5 w-full  '>
       <div className='flex justify-between items-center w-full'>
         <h2 className='text-2xl font-semibold'>ACTIVITY</h2>
         <Link
@@ -58,8 +74,8 @@ export default function Activities() {
         </Link>
       </div>
 
-      <div className='overflow-x-auto snap-x snap-mandatory w-full h-[200px] py-5 scrollbar-hide'>
-        <table className='min-w-full bg-primary text-white rounded-xl'>
+      <div className='overflow-auto snap-x snap-mandatory w-full py-5 scrollbar-hide'>
+        <table className='min-w-full bg-primary text-white rounded-xl '>
           <thead>
             <tr>
               <th className='py-2 px-4 text-[#dcd7d7]'>Transaction</th>
@@ -70,7 +86,7 @@ export default function Activities() {
             </tr>
           </thead>
           <tbody>
-            {transactions.map((transaction) => (
+            {transactions?.map((transaction) => (
               <tr
                 key={transaction.id}
                 className='snap-start text-sm odd:bg-[#eceaea56]'

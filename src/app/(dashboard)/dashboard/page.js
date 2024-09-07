@@ -99,6 +99,7 @@ export default function Dashboard() {
             backgroundColor: 'rgba(75, 192, 192, 0.2)',
             borderWidth: 3,
             pointRadius: 0,
+            tension: 0.1,
           },
         ],
       })
@@ -133,7 +134,7 @@ export default function Dashboard() {
   }
 
   return (
-    <main className='grid grid-cols-1 gap-10 w-full px-5 desktop:px-10'>
+    <main className='grid grid-cols-1 gap-10 w-full px-5 py-10 desktop:px-10'>
       <div className='flex justify-start items-start w-full gap-5 desktop:w-auto overflow-x-auto snap-x snap-mandatory scrollbar-hide'>
         {coins?.slice(0, 4)?.map((item) => {
           const formattedBalance = parseFloat(item.price_usd).toLocaleString(
@@ -191,11 +192,12 @@ export default function Dashboard() {
 
       <Activities />
 
-      <div className='max-w-full h-full mobile:h-full tablet:h-[500px] desktop:h-[500px] '>
+      <div className='max-w-full h-full mobile:h-[300px] tablet:h-[400px] desktop:h-[400px] '>
         <Line
           data={chartData}
           options={{
-            responsive: true,
+            // responsive: true,
+            maintainAspectRatio: false,
             scales: {
               x: {
                 type: 'time',
