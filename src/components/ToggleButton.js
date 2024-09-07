@@ -13,12 +13,10 @@ export default function ToggleButton({ initialState }) {
   return (
     <button
       type='button'
-      className={`h-[4rem] px-5 rounded-lg capitalize ${
-        isEnabled ? 'bg-primary text-black' : 'bg-orange text-black'
-      }`}
+      className={`capitalize ${isEnabled ? 'text-danger' : 'text-primary'}`}
       onClick={handleClick}
     >
-      {isEnabled ? 'enabled' : 'disabled'}
+      {!isEnabled ? 'enable' : 'disable'}
     </button>
   )
 }

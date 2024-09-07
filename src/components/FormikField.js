@@ -27,8 +27,8 @@ export default function FormikField({
         name={name}
         id={name}
         placeholder={placeholder}
-        className={`dark:bg-[#161D26] dark:placeholder:text-secondary bg-lightgrey placeholder:text-black px-4 w-full rounded-3xl outline-none laptop:placeholder:text-sm laptop:h-[60px] tablet:h-[80px] 
-         tablet:placeholder:text-lg mobile:placeholder:text-base mobile:h-[70px] ${inputStyle}`}
+        className={`placeholder:text-lightgrey placeholder:text-sm bg-[#FBF5F3] text-black w-full rounded-md outline-none h-14 border border-black indent-4 
+       ${inputStyle}`}
       />
       {isPassword && (
         <button type='button' className='absolute top-3 right-3 text-xl'>

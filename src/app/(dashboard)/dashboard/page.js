@@ -148,7 +148,7 @@ export default function Dashboard() {
           )
 
           return (
-            <h1
+            <div
               key={item.id}
               className='flex flex-col justify-center items-start gap-5 border border-primary rounded-xl p-3 snap-start h-[150px] w-[200px] laptop:h-auto'
             >
@@ -185,7 +185,7 @@ export default function Dashboard() {
                   {item.percent_change_7d}%
                 </div>
               </div>
-            </h1>
+            </div>
           )
         })}
       </div>
